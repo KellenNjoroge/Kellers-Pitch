@@ -28,7 +28,7 @@ It has the following features
 ## Demo
 This app was deployed in Heroku
 
-[Demo](https://oneminutepitch1.herokuapp.com/)
+[Demo](https://kellerspitch.herokuapp.com/)
 
 ## Architecture
 This is a list files or directories for pitch app

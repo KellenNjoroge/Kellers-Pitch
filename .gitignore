@@ -1,6 +1,6 @@
 #my files
 virtual/
-.idea
+.idea/
 start.sh
 .pytest_cache/
 *.pyc
