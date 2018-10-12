@@ -53,6 +53,10 @@ class User(UserMixin, db.Model):
             return
         return User.query.get(id)
 
+    def save_user(self):
+        db.session.add(self)
+        db.session.commit()
+
     def __repr__(self):
         return f'User {self.username}'
 

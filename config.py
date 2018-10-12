@@ -7,9 +7,10 @@ class Config:
     """
     SECRET_KEY = os.environ.get ('SECRET_KEY')
     DATABASE_PASS = os.environ.get('DATABASE_PASS')
-    UPLOOADED_PHOTOS_DEST = 'app/static/photos'
-    SQLACHEMY_DATABASE_URI = 'postgresql+psycopg2://kellen:kellen@localhost/kpitch'
-    SQLACHEMY_TRACK_MODIFICATIONS = False
+
+
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
@@ -34,7 +35,7 @@ class ProdConfig(Config):
     activate when you go to production mode
     """
     DATABASE_PASS = os.environ.get('DATABASE_PASS')
-    SQLACHEMY_DATABASE_URI = 'postgresql+psycopg2://kellen:kellen@localhost/kpitch'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
 class DevConfig(Config):
@@ -42,23 +43,12 @@ class DevConfig(Config):
     child class of Config
 
     """
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://kellen:kellen@localhost/kpitch'
-    DEBUG = True
-
-
-class TestConfig(Config):
-    """
-    Test configuration child class
-
-    Args:
-        Config: The parent configuration class with general configuration settings
-    """
-    DATABASE_PASS = os.environ.get('DATABASE_PASS')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://kellen:kellen@localhost/kpitch'
+    DEBUG = True
 
 
 config_options = {
     'development': DevConfig,
     'production': ProdConfig,
-    'test': TestConfig
+
 }
