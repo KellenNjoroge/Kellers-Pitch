@@ -18,6 +18,7 @@ mail = Mail()
 photos = UploadSet('photos', IMAGES)
 simple = SimpleMDE()
 
+
 def create_app(config_name):
     app = Flask(__name__)
 
