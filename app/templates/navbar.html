@@ -2,7 +2,7 @@
     {% if current_user.is_authenticated%}
     <a class="navbar-brand" href="/home">Home of the pitches!</a>
     {% else %}
-    <a class="navbar-brand" href="/">One Minute Pitch😀</a>
+    <a class="navbar-brand" href="/">Keller's Pitch😀</a>
     {% endif %}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -21,11 +21,11 @@
                     <a class="dropdown-item" href="/category/Product-Pitch">Product Pitch</a>
                     <a class="dropdown-item" href="/category/Promotion-Pitch">Promotion Pitch</a>
                     <a class="dropdown-item" href="/category/pick-up-lines">Pick Up lines</a>
-                    <!--<a class="dropdown-item" href="/category/Business">Business</a>-->
-                    <!--<a class="dropdown-item" href="/category/Academic">Academic</a>-->
-                    <!--<a class="dropdown-item" href="/category/Political">Political</a>-->
-                    <!--<a class="dropdown-item" href="/category/Technology">Technology</a>-->
-                    <!--<a class="dropdown-item" href="/category/Health">Health</a>-->
+                    <a class="dropdown-item" href="/category/Business">Business</a>
+                    <a class="dropdown-item" href="/category/Academic">Academic</a>
+                    <a class="dropdown-item" href="/category/Political">Political</a>
+                    <a class="dropdown-item" href="/category/Technology">Technology</a>
+                    <a class="dropdown-item" href="/category/Health">Health</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{url_for('main.profile', uname = current_user.username, id_user = current_user.id)}}">{{current_user.username|capitalize}}</a>
                 </div>
