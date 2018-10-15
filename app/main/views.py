@@ -91,7 +91,7 @@ def home():
 
     all_pitches = Pitch.get_all_pitches()
 
-    title = 'Home | One Minute Pitch'
+    title = "Home | Keller's Pitch"
     return render_template('home.html', title=title, pitch_form=pitch_form, pitches=all_pitches)
 
 
